@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WP_Lab2.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TayThien_API.Login" %>
 
 <!DOCTYPE html>
 
@@ -16,19 +16,20 @@
         }
                 /* style the container */
         .container {
-            position: relative;
-            border-radius: 5px;
-            background-color: #f2f2f2;
+            position: center;
+            border-radius: 30px;
+            background-color: #a0e0d6;
             padding: 20px 0 30px 0;
             top: 0px;
             left: 0px;
             height: 200px;
             width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         } 
 
-        /* style inputs and link buttons */
         input,
-        .btn {
+        .loginBtn {
             width: 100%;
             padding: 12px;
             border: none;
@@ -36,9 +37,7 @@
             margin: 5px 0;
             opacity: 0.85;
             display: inline-block;
-            font-size: 17px;
             line-height: 20px;
-            text-decoration: none; /* remove underline from anchors */
             
         }
 
@@ -54,13 +53,13 @@
 
 
         /* style the submit button */
-        input[type=submit] {
+        .loginBtn {
             background-color: #4CAF50;
             color: white;
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        .loginBtn:hover {
             background-color: #45a049;
         }
 
@@ -68,24 +67,37 @@
             font-size: 40px;
         }
 
+        .auto-style1 {
+            height: 82px;
+        }
+
+        .registerBtn{
+            font-size: 20px;
+            color: black;
+        }
+
     </style>
-    &nbsp;<asp:Label ID="websiteLb" runat="server" Text="Login to Website" style='font-size:30px; margin-left:50px;'></asp:Label>
 </header>
 <body>
     <form id="form1" runat="server">
-    <table class="container">
+    <table class="container" style="text-align: center;">
+        <tr>
+            <td colspan="2">
+                    &nbsp;<asp:Label ID="websiteLb" runat="server" Text="Tây Thiên" style='font-size:30px; margin-left: auto; margin-right: auto;'></asp:Label>
+            </td>
+        </tr>
             <tr>
-                <td style="text-align: right">
-                    <asp:Label ID="studentNameLb" runat="server" Text="Student Name: " CssClass="loginFormLabel"></asp:Label>
+                <td style="text-align: right" class="auto-style1">
+                    <asp:Label ID="usernameLB" runat="server" Text="Username: " CssClass="loginFormLabel"></asp:Label>
                 </td>
-                <td style="text-align: left;">
-                    <asp:TextBox ID="studentTB" runat="server" Width="400px"></asp:TextBox>
+                <td style="text-align: left;" class="auto-style1">
+                    <asp:TextBox ID="usernameTB" runat="server" Width="400px"></asp:TextBox>
                 </td>
 
             </tr>                   
             <tr>
                 <td style="text-align: right">
-                    <asp:Label ID="passLb" runat="server" Text="Password: " CssClass="loginFormLabel"></asp:Label>
+                    <asp:Label ID="passLb" runat="server" Text="Mật khẩu: " CssClass="loginFormLabel"></asp:Label>
                 </td>
                 <td style="text-align: left;">
                     <asp:TextBox ID="passInput" runat="server" TextMode="Password" Width="400px"></asp:TextBox>
@@ -93,7 +105,12 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center">
-                    <asp:Button ID="loginBtn" runat="server" Text="Login" Height="80px" OnClick="loginBtn_Click" Width="500px" />
+                    <asp:Button class="loginBtn" runat="server" Text="Đăng nhập" Height="80px" OnClick="loginBtn_Click" Width="500px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <asp:Button class="registerBtn" runat="server" Text="Đăng ký" Height="80px" OnClick="registerBtn_Click" Width="100px" />
                 </td>
             </tr>
                 

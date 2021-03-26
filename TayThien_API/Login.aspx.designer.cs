@@ -7,21 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WP_Lab2
+namespace TayThien_API
 {
 
 
     public partial class Login
     {
-
-        /// <summary>
-        /// websiteLb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label websiteLb;
 
         /// <summary>
         /// form1 control.
@@ -33,22 +24,31 @@ namespace WP_Lab2
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// studentNameLb control.
+        /// websiteLb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label studentNameLb;
+        protected global::System.Web.UI.WebControls.Label websiteLb;
 
         /// <summary>
-        /// studentTB control.
+        /// usernameLB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studentTB;
+        protected global::System.Web.UI.WebControls.Label usernameLB;
+
+        /// <summary>
+        /// usernameTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox usernameTB;
 
         /// <summary>
         /// passLb control.
@@ -67,14 +67,5 @@ namespace WP_Lab2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passInput;
-
-        /// <summary>
-        /// loginBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginBtn;
     }
 }
