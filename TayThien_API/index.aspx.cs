@@ -11,7 +11,17 @@ namespace TayThien_API
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int isLogin = 0;
+            if (Session["isLogin"] != null)
+            {
+                isLogin = (int)Session["isLogin"];
+            }
+            if (isLogin == 0)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
+
+
     }
 }

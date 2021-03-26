@@ -7,12 +7,12 @@
     <title>Tây Thiên API</title>
 			
 	<style>
-		@mixin font-base {
+		/*@mixin font-base {
 			padding: 0;
 			margin: 0;
 			line-height: 1.3;
 			font-weight: 600;
-		}
+		}*/
 
 		h4 {
 			@include font-base;
@@ -198,12 +198,27 @@
 			background-color: white;
 			color: black;
 		}
+
+		.youTubeLogo{
+			width: 5%;
+			height: 5%;
+		}
+
+		.youTubeLogo:hover{
+			color: red;
+			opacity: 0.5;
+		}
+
+
+		.youtube{
+			position: relative;
+		}
 	</style>
 	
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css"/>
-	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-	-->
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css"/>
+		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+		-->
 	<script type="text/javascript">
         function darkModeToggle() {
             var checkBox = document.getElementById("optionBtn");
@@ -221,9 +236,11 @@
 </head>
 
 <body class="light-mode">
-	<a href="https://www.youtube.com">
-		<img src="https://cdn.iconscout.com/icon/free/png-256/youtube-104-432560.png" alt="" class="logo" />
-	</a>
+	<div class="youtube">
+		<a href="https://www.youtube.com">
+			<img src="https://cdn.iconscout.com/icon/free/png-256/youtube-104-432560.png" alt="Go To YouTube" class="youTubeLogo"/>
+		</a>
+	</div>
     <form id="form1" runat="server" >
         <div class="container">
 			<!--<section id="video">
@@ -234,7 +251,7 @@
 				<input type="checkbox" class="form-control" id="optionBtn" onclick="darkModeToggle()"/>
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" id="search"/>
+				<input type="text" class="form-control" id="search" placeholder="Tìm kiếm ở đây"/>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn search" id="submitBtn"><i class="fa fa-youtube">Search</i></button>
